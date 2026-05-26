@@ -13,15 +13,23 @@
 <a href="/index.html">Takaisin</a>
 
 
+<h2>Faniposti</h2>
 
-
-<h2>Lähetä viesti</h2>
-
-<input type="text" id="message" placeholder="Kirjoita viesti">
+<input type="text" id="message" placeholder="Kirjoita faniposti">
 <button onclick="sendMessage()">Lähetä</button>
 
 <script>
+    
+let lastSent = 0;
+
 async function sendMessage() {
+
+    const now = Date.now();
+
+    if (now - lastSent < 30000){
+            alert("Pojuuu älä spämmää (odota 30 sec)")
+            return;
+    }
 
   const message = document.getElementById("message").value;
 
@@ -37,7 +45,7 @@ async function sendMessage() {
     })
   });
 
-  alert("Viesti lähetetty!");
+  alert("Viesti on lähetetty kiitos!");
 }
 </script>
 
