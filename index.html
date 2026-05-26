@@ -34,7 +34,16 @@
 <br>
 
 <script>
+let lastSent = 0;
+
 async function sendMessage() {
+
+   const now = Date.now();
+
+    if (now - lastSent < 30000){
+            alert("Pojuuu älä spämmää (odota 30 sec)")
+            return;
+    }
 
  const nimi = document.getElementById("nimi_id").value;
  const vari = document.getElementById("vari_id").value;
@@ -58,7 +67,9 @@ async function sendMessage() {
   })
  })
 
- alert("Viesti lähetetty!");
+lastSent = Date.now();
+ 
+ alert("Sinne meni tiedot!");
 }
 
 </script>
