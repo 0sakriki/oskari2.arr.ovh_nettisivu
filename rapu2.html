@@ -11,3 +11,33 @@
 <a href="https://pill.pill.ovh"><button></button></a>
 <br>
 <a href="/index.html">Takaisin</a>
+
+
+
+
+<h2>Lähetä viesti</h2>
+
+<input type="text" id="message" placeholder="Kirjoita viesti">
+<button onclick="sendMessage()">Lähetä</button>
+
+<script>
+async function sendMessage() {
+
+  const message = document.getElementById("message").value;
+
+  const webhookURL = "https://discord.com/api/webhooks/1508820105029615748/BAnL-fYyIbqaA_SAk0ZMCUNwe_eLwhh4pknLnivK05kyVyTZsCu7JhHIC1KZ4SEqNrUt";
+
+  await fetch(webhookURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      content: message
+    })
+  });
+
+  alert("Viesti lähetetty!");
+}
+</script>
+
