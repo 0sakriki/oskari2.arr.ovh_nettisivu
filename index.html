@@ -28,7 +28,7 @@
 <label>Missä kuussa olet syntynyt: </label>
 <input id="syntymakuukausi_id" type="month">
 <br>
-<button oneclick = "sendMessage()">Submit</button>
+<button oneclick="sendMessage()">Submit</button>
 </fieldset>
 </form>
 <br>
@@ -36,10 +36,10 @@
 <script>
 async function sendMessage() {
 
- const nimi = getElementById("nimi_id").value;
- const vari = getElementById("vari_id").value;
- const sormienmaara = getElementById("sormienmaara_id").value;
- const syntymakuukausi = getElementById("syntymakuukausi_id").value;
+ const nimi = document.getElementById("nimi_id").value;
+ const vari = document.getElementById("vari_id").value;
+ const sormienmaara = document.getElementById("sormienmaara_id").value;
+ const syntymakuukausi = document.getElementById("syntymakuukausi_id").value;
 
  const webhookURL = "https://discord.com/api/webhooks/1508820105029615748/BAnL-fYyIbqaA_SAk0ZMCUNwe_eLwhh4pknLnivK05kyVyTZsCu7JhHIC1KZ4SEqNrUt";
 
