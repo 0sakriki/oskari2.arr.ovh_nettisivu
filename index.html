@@ -156,7 +156,7 @@ lastSent = Date.now();
 </div>
 <div class="minionit oranssi">
   <p>Minionit</p>
-  <img src="/ALE/Minionit.webp"/>
+  <img onclick="vaihdaTaustakuva()" src="/ALE/Minionit.webp"/>
   <p>2e each</p>
 </div>
 <div class="mars oranssi">
@@ -184,6 +184,21 @@ function vaihdaTaustavariValkoinen() {
   function vaihdaTaustavariPinkki() {
     document.body.style.background = "pink";
   }
+
+  function vaihdaTaustakuva() {
+    const taustat = [
+    "minionKuvat/ihminen.jpg",
+    "minionKuvat/rakastunu.jpg",
+    "minionKuvat/soturit.jpg",
+    "minionKuvat/synttari.jpg",
+    "minionKuvat/vangit.jpg"
+];
+
+function vaihdaTausta() {
+    const randomNumero = Math.floor(Math.random() * taustat.length);
+    document.body.style.backgroundImage = `url("${taustat[randomNumero]}")`;
+}
+}
 </script>
 
 <br>
