@@ -165,12 +165,26 @@ lastSent = Date.now();
   <p>0,13e</p>
 </div>
 
+<h1 onclick="vaihdaTaustavariTumma()" class="Dark">Dark</h1>
+<h1 onclick="vaihdaTaustavariPinkki()" class="Notdark">Not dark</h1>
+<h1 class="Dark">Dark</h1>
+<h1 onclick="vaihdaTaustavariValkoinen()" class="Notdark">Not dark</h1>
 <h1 class="Dark">Dark</h1>
 <h1 class="Notdark">Not dark</h1>
-<h1 class="Dark">Dark</h1>
-<h1 class="Notdark">Not dark</h1>
-<h1 class="Dark">Dark</h1>
-<h1 class="Notdark">Not dark</h1>
+
+<script>
+  function vaihdaTaustavariTumma() {
+    document.body.style.background = "black";
+  }
+
+function vaihdaTaustavariValkoinen() {
+    document.body.style.background = "white";
+  }
+
+  function vaihdaTaustavariPinkki() {
+    document.body.style.background = "pink";
+  }
+</script>
 
 <br>
 <img src="/kasvomaskinkäyttäminenpelastaamuidentarttumiselta.png" width="70%">
