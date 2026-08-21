@@ -185,7 +185,6 @@ function vaihdaTaustavariValkoinen() {
     document.body.style.background = "pink";
   }
 
-  function vaihdaTaustakuva() {
     const taustat = [
     "minionKuvat/ihminen.jpg",
     "minionKuvat/rakastunu.jpg",
@@ -194,11 +193,11 @@ function vaihdaTaustavariValkoinen() {
     "minionKuvat/vangit.jpg"
 ];
 
-function vaihdaTausta() {
+function vaihdaTaustakuva() {
     const randomNumero = Math.floor(Math.random() * taustat.length);
     document.body.style.backgroundImage = `url("${taustat[randomNumero]}")`;
 }
-}
+
 </script>
 
 <br>
